@@ -1,0 +1,55 @@
+body {
+    background-color: #1e1e1e;
+}
+
+/* NAV BAR STYLES */
+
+.navbar-brand {
+    background-color: #d52b1e;
+    height:88px;
+    padding:28px 10px;
+}
+.navbar {
+    color: #fff;
+    height: 88px;
+    font-size:12px;
+}
+.navbar a {
+    color: #fff;
+
+}
+.search-form{
+  padding:20px 0;
+}
+.nav.navbar-nav>li>a{
+  padding: 34px 27px;
+}
+.nav.navbar-nav>li>a:hover {
+    background-color: inherit;
+}
+.navbar .form-control {
+    border-radius: 0;
+}
+.btn.search-button {
+    border-radius: 0;
+    background-color: #d52b1e;
+    color: #fff;
+    margin-left: -4px;
+}
+.phone-number {
+    color: #d52b1e;
+    display: inline-block;
+    margin-right: 10px;
+}
+.site-utility {
+    padding-top: 25px;
+    text-align: right;
+}
+.sign-in {
+    display: inline-block;
+    margin-right: 10px;
+}
+.dealer-locator {
+    display: inline-block;
+    margin-left: 10px;
+}
