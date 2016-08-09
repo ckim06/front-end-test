@@ -1,28 +1,27 @@
 body {
     background-color: #1e1e1e;
+    color: #fff;
 }
 
 /* NAV BAR STYLES */
 
 .navbar-brand {
     background-color: #d52b1e;
-    height:88px;
-    padding:28px 10px;
+    height: 88px;
+    padding: 28px 10px;
 }
 .navbar {
-    color: #fff;
     height: 88px;
-    font-size:12px;
+    font-size: 12px;
 }
 .navbar a {
     color: #fff;
-
 }
-.search-form{
-  padding:20px 0;
+.search-form {
+    padding: 20px 0;
 }
-.nav.navbar-nav>li>a{
-  padding: 34px 27px;
+.nav.navbar-nav>li>a {
+    padding: 34px 27px;
 }
 .nav.navbar-nav>li>a:hover {
     background-color: inherit;
@@ -52,4 +51,17 @@ body {
 .dealer-locator {
     display: inline-block;
     margin-left: 10px;
+}
+
+/* Product styles */
+.products img{
+  width:100%;
+}
+
+
+
+/* Footer styles */
+footer{
+  background-color:#000;
+  border-top:#505050;
 }
