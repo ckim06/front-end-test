@@ -2,17 +2,18 @@ body {
     background-color: #1e1e1e;
     color: #fff;
 }
-select{
-  color:#000;
+select {
+    color: #000;
 }
 a {
     color: #fff;
 }
-/* NAV BAR STYLES */
-.icon-bar{
-  background-color: #fff;
-}
 
+/* NAV BAR STYLES */
+
+.icon-bar {
+    background-color: #fff;
+}
 .navbar-brand {
     background-color: #d52b1e;
     height: 88px;
@@ -34,9 +35,7 @@ a {
 .search-form {
     padding: 20px 0;
 }
-.navbar input[type=text]{
-  width: 105px;
-}
+
 .btn.search-button {
     border-radius: 0;
     background-color: #d52b1e;
@@ -60,50 +59,70 @@ a {
     display: inline-block;
     margin-left: 10px;
 }
+
 /* filter styles */
-.filters label{
-  display:block;
+
+.filters label {
+    display: block;
 }
 .filters select {
-  margin-bottom:20px;
+    margin-bottom: 20px;
 }
+
 /* Product styles */
-.products img{
-  width:100%;
+
+.products img {
+    width: 100%;
+}
+.products div{
+  cursor: pointer;
 }
 
 /* popup styles */
+
 .modal-dialog {
-  color: #000;
+    color: #000;
 }
-
-
+.modal-dialog img{
+  display:block;
+  width: 100%;
+}
 /* Footer styles */
-footer{
-  margin:20px 20px 0 20px;
-  padding:60px 20px;
-  text-align:center;
-  background-color:#000;
-  border-top:solid 1px #505050;
+
+footer {
+    margin: 20px 20px 0 20px;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #000;
+    border-top: solid 1px #505050;
 }
-footer img{
-  margin-bottom:20px;
+footer img {
+    margin-bottom: 20px;
 }
 
 /* media queries */
-@media only screen and (max-width: 768px) {
-  .navbar-collapse{
-    position: absolute;
-    height: auto;
-    background-color: #000;
-    z-index: 10;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 1050px) and
-(min-width:768px) {
-  .nav.navbar-nav>li>a {
-      padding: 34px 10px;
-  }
 
+@media only screen and (max-width: 768px) {
+    .navbar-collapse {
+        position: absolute;
+        height: auto;
+        background-color: #000;
+        z-index: 10;
+        width: 100%;
+    }
+    .navbar input[type=text] {
+        width: 90%;
+        display:inline-block;
+    }
+    .navbar-form .form-group{
+      padding: 0 15px;
+    }
+}
+@media only screen and (max-width: 1050px) and (min-width:768px) {
+    .nav.navbar-nav>li>a {
+        padding: 34px 5px;
+    }
+    .navbar input[type=text] {
+        width: 80px;
+    }
 }
