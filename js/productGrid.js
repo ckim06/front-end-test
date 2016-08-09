@@ -1,4 +1,5 @@
 "use strict";
+
 function productGridController($scope, $uibModal, productService) {
     //If you are running off a server uncomment the line below.  Otherwise if
     // if you are running off the file:// protocol use getAllIfRunLocal()
@@ -8,18 +9,24 @@ function productGridController($scope, $uibModal, productService) {
     });
 
     $scope.details = function(product) {
-      console.log(product);
         var modalInstance = $uibModal.open({
-                templateUrl: 'details-template.html',
-                controller: detailsController
-            });
-        }
-    }
+            templateUrl: 'details-template.html',
+            controller: function($scope, $uibModalInstance) {
+                $scope.product = product;
+            }
+        });
+    };
+    $scope.seriesChange = function() {
+        console.log($scope.seriesOption);
+    };
+    $scope.categoryChange = function() {
+        console.log($scope.categoryOption);
 
-    function detailsController($scope, $uibModalInstance) {
+    };
+}
 
-    }
-    angular.module("fenderApp").component("productGrid", {
-        templateUrl: "product-grid-template.html",
-        controller: productGridController
-    });
+
+angular.module("fenderApp").component("productGrid", {
+    templateUrl: "product-grid-template.html",
+    controller: productGridController
+});

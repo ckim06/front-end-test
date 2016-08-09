@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img alt="Fender" src="img/fender-logo.png"/></a>
+                    <a class="navbar-brand" href="#"><img alt="Fender" src="img/fender-logo.png" /></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -42,13 +42,12 @@
                         <button type="submit" class="btn search-button"><span class="glyphicon glyphicon-search"></span></button>
                     </form>
                     <div class="nav site-utility navbar-right">
-                          <p>
+                        <p>
                             <a class="sign-in" href="#">SIGN IN</a> / <a class="dealer-locator" href="#">DEALER LOCATOR</a>
-                          </p>
-                          <p>
-                            <span class="glyphicon glyphicon-earphone"></span> <span class="phone-number">1-844-202-0924</span>
-                            VIEW CART <span class="glyphicon glyphicon-shopping-cart"></span> (0)
-                          </p>
+                        </p>
+                        <p>
+                            <span class="glyphicon glyphicon-earphone"></span> <span class="phone-number">1-844-202-0924</span> VIEW CART <span class="glyphicon glyphicon-shopping-cart"></span> (0)
+                        </p>
                     </div>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -56,28 +55,55 @@
             <!-- /.container-fluid -->
         </nav>
         <main>
-          <product-grid></product-grid>
-          <footer>
-            <img src="img/fender-footer-logo.gif" />
-            Copyright © 2016 Fender Musical Instruments Corporation. All Rights Reserved.Privacy Policy Terms & Conditions Supply Chain Transparency
-          </footer>
+            <product-grid></product-grid>
+            <footer>
+                <img src="img/fender-footer-logo.gif" /> Copyright © 2016 Fender Musical Instruments Corporation. All Rights Reserved.Privacy Policy Terms & Conditions Supply Chain Transparency
+            </footer>
         </main>
     </div>
 </body>
 <script type="text/ng-template" id="product-grid-template.html">
-<div class="row products">
-  <div class="col-md-2" ng-repeat="product in products" ng-click="details(product)">
-  <h3>{{product.productDisplayName_en}}</h3>
-  <h5>{{product.series}}</h5>
-  <img ng-src="{{product.images[0]}}"/>
-  </div>
+    <div class="row filters">
+        <div class="form-group">
+            <label for="series-filter">Series</label>
+            <select id="series-filer" ng-change="seriesChange()" ng-model="seriesOption">
+                <option value="">Select</option>
+                <option value="classic">Classic</option>
+                <option value="vintage_modified_models">Vintage Modified Models</option>
+                <option value="plates_covers">Plates & Covers</option>
+                <option value="artist">Artist</option>
+                <option value="miscellaneous_parts">Miscellaneous Parts</option>
+                <option value="mounting_hardware">Mounting Hardware</option>
+                <option value="standard">Standard</option>
+                <option value="american_standard">American Standard</option>
+                <option value="knobs_kits_pickup_covers">Knobs, Kits, & Pickup Covers</option>
+                <option value="pickguards_backplates">Pickguards & Backplates</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="category-filter">Product Category</label>
+            <select id="category-filer" ng-change="categoryChange()" ng-model="categoryOption">
+                <option value="">Select</option>
+                <option value="guitars">Guitars</option>
+                <option value="guitar_and_bass_parts">Guitar and Bass Parts</option>
+            </select>
+        </div>
+    </div>
+    <div class="row products">
+        <div class="col-md-2" ng-repeat="product in products | filter:seriesOption:strict | filter:categoryOption:strict" ng-click="details(product)">
+            <h3>{{product.productDisplayName_en}}</h3>
+            <h5>{{product.series}}</h5>
+            <img ng-src="{{product.images[0]}}" />
+        </div>
 
 </script>
 <script type="text/ng-template" id="details-template.html">
-<div class="modal-header">
-    <h3 class="modal-title">Task Details</h3>
-</div>
-<div class="modal-body">
-</div>
+    <div class="modal-header">
+        <h3 class="modal-title">{{product.productDisplayName_en}}</h3>
+    </div>
+    <div class="modal-body">
+        <img ng-src="{{product.images[0]}}" /> {{product.series}}
+    </div>
 </script>
+
 </html>

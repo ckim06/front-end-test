@@ -58,6 +58,10 @@ body {
   width:100%;
 }
 
+/* popup styles */
+.modal-dialog {
+  color: #000;
+}
 
 
 /* Footer styles */
