@@ -2,7 +2,12 @@ body {
     background-color: #1e1e1e;
     color: #fff;
 }
-
+select{
+  color:#000;
+}
+a {
+    color: #fff;
+}
 /* NAV BAR STYLES */
 
 .navbar-brand {
@@ -14,9 +19,7 @@ body {
     height: 88px;
     font-size: 12px;
 }
-.navbar a {
-    color: #fff;
-}
+
 .search-form {
     padding: 20px 0;
 }
@@ -54,7 +57,7 @@ body {
 }
 
 /* Product styles */
-.products img{
+.filters img{
   width:100%;
 }
 
@@ -66,6 +69,12 @@ body {
 
 /* Footer styles */
 footer{
+  margin:20px 20px 0 20px;
+  padding:60px 20px;
+  text-align:center;
   background-color:#000;
-  border-top:#505050;
+  border-top:solid 1px #505050;
+}
+footer img{
+  margin-bottom:20px;
 }

@@ -57,14 +57,20 @@
         <main>
             <product-grid></product-grid>
             <footer>
-                <img src="img/fender-footer-logo.gif" /> Copyright © 2016 Fender Musical Instruments Corporation. All Rights Reserved.Privacy Policy Terms & Conditions Supply Chain Transparency
+                <img src="img/fender-footer-logo.gif" />
+                <ul class="list-inline">
+                    <li>Copyright © 2016 Fender Musical Instruments Corporation. All Rights Reserved.</li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Supply Chain Transparency</a></li>
+                </ul>
             </footer>
         </main>
     </div>
 </body>
 <script type="text/ng-template" id="product-grid-template.html">
     <div class="row filters">
-        <div class="form-group">
+        <div class="form-group col-md-2">
             <label for="series-filter">Series</label>
             <select id="series-filer" ng-change="seriesChange()" ng-model="seriesOption">
                 <option value="">Select</option>
@@ -79,8 +85,7 @@
                 <option value="knobs_kits_pickup_covers">Knobs, Kits, & Pickup Covers</option>
                 <option value="pickguards_backplates">Pickguards & Backplates</option>
             </select>
-        </div>
-        <div class="form-group">
+
             <label for="category-filter">Product Category</label>
             <select id="category-filer" ng-change="categoryChange()" ng-model="categoryOption">
                 <option value="">Select</option>
@@ -88,14 +93,14 @@
                 <option value="guitar_and_bass_parts">Guitar and Bass Parts</option>
             </select>
         </div>
-    </div>
-    <div class="row products">
-        <div class="col-md-2" ng-repeat="product in products | filter:seriesOption:strict | filter:categoryOption:strict" ng-click="details(product)">
-            <h3>{{product.productDisplayName_en}}</h3>
-            <h5>{{product.series}}</h5>
-            <img ng-src="{{product.images[0]}}" />
+        <div class="col-md-10">
+            <div class="col-md-2" ng-repeat="product in products | filter:seriesOption:strict | filter:categoryOption:strict" ng-click="details(product)">
+                <h3>{{product.productDisplayName_en}}</h3>
+                <h5>{{product.series}}</h5>
+                <img ng-src="{{product.images[0]}}" />
+            </div>
         </div>
-
+    </div>
 </script>
 <script type="text/ng-template" id="details-template.html">
     <div class="modal-header">
