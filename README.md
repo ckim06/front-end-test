@@ -12,3 +12,6 @@ Another issue that I ran into from running it from file:// is that html template
 Some of the images from products.json came back with access denied errors.  I'm not sure how to fix that from the front-end, I would usually go to the person that set up those images for a fix.
 
 Some of the products are also missing a productDisplayName_en property.  I wasn't exactly sure what properties to use, so I picked that one and series. 
+
+## Wishlist for More Time
+If I had more time I wish I could find a better responsive fix for the grid.
