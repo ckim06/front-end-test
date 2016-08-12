@@ -16,16 +16,7 @@ function productGridController($scope, $uibModal, productService) {
             }
         });
     };
-    $scope.seriesChange = function() {
-        console.log($scope.seriesOption);
-    };
-    $scope.categoryChange = function() {
-        console.log($scope.categoryOption);
-
-    };
 }
-
-
 angular.module("fenderApp").component("productGrid", {
     templateUrl: "product-grid-template.html",
     controller: productGridController
