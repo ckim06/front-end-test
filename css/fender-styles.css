@@ -69,13 +69,15 @@ a {
 }
 
 /* Product styles */
-
+.products{
+  display: flex;
+  flex-wrap:wrap;
+}
 .products img {
     width: 100%;
 }
 .products div {
     cursor: pointer;
-    min-height: 460px;
 }
 
 /* popup styles */
